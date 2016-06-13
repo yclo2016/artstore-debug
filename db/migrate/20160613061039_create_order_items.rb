@@ -4,8 +4,7 @@ class CreateOrderItems < ActiveRecord::Migration
       t.integer :order_id
       t.string :product_name
       t.integer :price
-      t.string :quantity
-      t.string :integer
+      t.integer :quantity
 
       t.timestamps null: false
     end

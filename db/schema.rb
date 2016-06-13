@@ -39,18 +39,16 @@ ActiveRecord::Schema.define(version: 20160613061039) do
     t.integer  "order_id"
     t.string   "product_name"
     t.integer  "price"
-    t.string   "quantity"
-    t.string   "integer"
+    t.integer  "quantity"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "total"
-    t.integer  "0"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "total",      default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "photos", force: :cascade do |t|
